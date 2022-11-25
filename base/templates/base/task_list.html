@@ -1,0 +1,45 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+
+<h1 style="font-size: 2rem; color:#0c0003; margin:0.4rem; " >To Do List APP</h1>
+
+{% if request.user.is_authenticated %}
+
+	<h3 style="background-color:#a05f67; color:#000000; font-size:1.5rem; margin:0.5rem; ">{{request.user}}</H3>
+
+	<a href="{% url 'logout' %}">Logout</a>
+
+{% else %}
+
+	<a href="{% url 'login' %}">Login</a>
+
+{% endif %}
+
+
+
+<hr>
+
+
+<a href="{% url 'task-create' %}">Add task</a> <!-- This will create new task  -->
+<table>
+	<tr>
+		<th>Item</th>
+		<th >Action</th>
+		<th>Action</th>
+		<th>Action</th>
+	</tr>
+		{% for task in tasks %} <!-- my for loop begin here -->
+
+	<tr>
+		<td style=" font-size: 1.2rem; color:#000000; margin:1rem; " >{{task.title}}</td>
+		<td><a href="{% url 'task' task.id %}" style="color: #1aa3e5;" >View</a></td>
+		<td><a href="{% url 'task-update' task.id %}" style="color: #3ec639;" >Edit</a></td>
+		<td><a href="{% url 'task-delete' task.id %}" style="color: #ce317e	;">Delete</a></td>
+	</tr>
+	{% empty %}<!-- In case the there is no data -->
+		<h3>No items in list</h3>
+	{% endfor %}
+</table>
+
+{% endblock content %}
