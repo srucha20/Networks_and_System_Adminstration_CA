@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-u0+3&9j36m7tm5^3!75q301y0oepo$-rqlir+v2qgllg$4y7y)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['todolistapp-env.eba-2zbhrhsd.eu-west-1.elasticbeanstalk.com','37.228.230.126']
+ALLOWED_HOSTS = ['todolistapp-env.eba-2zbhrhsd.eu-west-1.elasticbeanstalk.com','37.228.230.126', '127.0.0.1']
 
 
 # Application definition
