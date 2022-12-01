@@ -17,9 +17,11 @@
 	{% endif %}
 	<hr>
 	<div style="display: flex; justify-content: center; align-items: center;">
-		<button style="padding: 20px 40px; border-radius: 10px; margin: 30px 0;background: #79999d; border: 1px solid grey;">
-			<a href="{% url 'task-create' %}" style="text-decoration: inherit; font-size: 1.2rem; color: white; cursor: auto;">
-				Add task</a> </button><!-- This will create new task  -->
+		
+			<a href="{% url 'task-create' %}" style="text-decoration: inherit;">
+				<button style="padding: 25px 45px;  font-size: 1.2rem; border-radius: 10px; margin: 30px 0; color: white; cursor: pointer;background: #79999d; border: 1px solid grey;">
+				Add task
+			</button></a><!-- This will create new task  -->
 	</div>
 	<table style="border:1">
 		
