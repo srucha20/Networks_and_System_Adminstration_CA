@@ -6,7 +6,7 @@ phases:
         commands:
             - pip install --upgrade pip
             #- pip install pysqlite3
-            - pip3 install pysqlite3
+            - pip install sqlite3
             #- pip3 install pysqlite3-binary
             # Install dependencies needed for running the static analysis
             - pip install -r requirements.txt
