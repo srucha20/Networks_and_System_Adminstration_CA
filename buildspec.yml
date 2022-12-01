@@ -10,7 +10,7 @@ phases:
             #- pip3 install pysqlite3-binary
             # Install dependencies needed for running the static analysis
             - pip install -r requirements.txt
-            - sudo yum install sqlite-3.8.11-1.fc21.x86_64.rpm
+            - yum install sqlite-3.8.11-1.fc21.x86_64.rpm
 
     pre_build:
         commands:
